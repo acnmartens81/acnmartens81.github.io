@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekendje Brugge</title>
+    <style>
+        :root {
+            --primary-color: #3a3a3a;
+            --secondary-color: #8b7d6b;
+            --accent-color: #d4c8b0;
+            --background-color: #f9f7f4;
+            --text-color: #333333;
+        }
+        
+        body {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("fotos/header.jpg");
+            background-size: cover;
+            background-position: center;
+            height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 0 20px;
+        }
+        
+        h1 {
+            font-size: 4rem;
+            margin-bottom: 0.5rem;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+        
+        h2 {
+            font-size: 2.2rem;
+            margin-top: 2rem;
+            border-bottom: 1px solid var(--accent-color);
+            padding-bottom: 0.5rem;
+            font-weight: 400;
+        }
+        
+        h3 {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-top: 1.5rem;
+            font-weight: 400;
+        }
+        
+        .subtitle {
+            font-size: 1.5rem;
+            margin-top: 0.5rem;
+            font-style: italic;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .intro {
+            font-size: 1.2rem;
+            margin: 2rem 0;
+            line-height: 1.8;
+        }
+        
+        .day-container {
+            margin-bottom: 3rem;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+        }
+        
+        .day-header {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 1rem 2rem;
+        }
+        
+        .day-header h2 {
+            color: white; /* Verbeterde zichtbaarheid van de titel */
+            margin: 0;
+            border-bottom: none;
+        }
+        
+        .day-content {
+            padding: 2rem;
+        }
+        
+        .schedule-item {
+            display: flex;
+            margin-bottom: 1.5rem;
+            align-items: flex-start;
+        }
+        
+        .time {
+            min-width: 100px;
+            font-weight: bold;
+            color: var(--secondary-color);
+            font-size: 1.1rem;
+        }
+        
+        .activity {
+            flex-grow: 1;
+            font-size: 1.1rem;
+        }
+        
+        .carousel-container {
+            margin: 2rem 0;
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            height: 300px;
+        }
+        
+        .carousel {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.5s ease;
+        }
+        
+        .carousel-slide {
+            min-width: 100%;
+            position: relative;
+        }
+        
+        .carousel-slide img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+        
+        .carousel-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            font-style: italic;
+        }
+        
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(255, 255, 255, 0.5);
+            color: var(--primary-color);
+            border: none;
+            font-size: 1.5rem;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            z-index: 10;
+            border-radius: 50%;
+            transition: background-color 0.3s;
+        }
+        
+        .carousel-btn:hover {
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .carousel-btn.prev {
+            left: 10px;
+        }
+        
+        .carousel-btn.next {
+            right: 10px;
+        }
+        
+        .important-note {
+            background-color: var(--accent-color);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+        
+        .important-note h3 {
+            margin-top: 0;
+            color: var(--primary-color);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: var(--primary-color);
+            color: white;
+            margin-top: 3rem;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .schedule-item {
+                flex-direction: column;
+            }
+            
+            .time {
+                margin-bottom: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Weekendje Brugge</h1>
+        <h2>Vrijdag 28 t/m Zondag 30 maart</h2>
+        <p class="subtitle">Een romantisch weekend vol ontspanning en bourgondisch genieten!</p>
+    </header>
+    
+    <div class="container">
+        <div class="intro">
+            <p>Lieve Daan,                
+            </br>
+            </br>
+            Een bijzondere verjaardag dus ook een bijzonder cadeau: 
+            Voor mijn luxepoes een verjaardagsweekend in het teken van lekker eten, ontspannen en romantisch samen zijn in het mooie Brugge! 
+            Hieronder vind je ons programma voor dit lange weekendje samen.
+            </br>
+            </br>
+            Van harte gefeliciteerd!</br>Alain</p>
+        </div>
+        
+        <div class="important-note">
+            <h3>Praktische zaken</h3>
+            <p>1. Lucy en Zola logeren dit weekend bij Jos en Juul.</p>
+            <p>2. Juul haalt de meiden op uit de BSO zodat wij vrijdag weg kunnen.</p>
+            <p>3. Bailey logeert bij Adri en Marjan.</p>
+        </div>
+        
+        <div class="day-container">
+            <div class="day-header">
+                <h2>Vrijdag – Aankomst & Romantische Start</h2>
+            </div>
+            <div class="day-content">
+                <div class="schedule-item">
+                    <div class="time">08:00</div>
+                    <div class="activity">Meiden wegbrengen naar de BSO</div>
+                </div>
+                <div class="schedule-item">
+                    <div class="time">12:00</div>
+                    <div class="activity">Vertrek met de auto naar Brugge</div>
+                </div>
+                <div class="schedule-item">
+                    <div class="time">14:00</div>
+                    <div class="activity">Aankomst en inchecken in Hotel Dukes' Arches</div>
+                </div>
+                <div class="schedule-item">
+                    <div class="time">15:00</div>
+                    <div class="activity">Wandeling door de historische straatjes, langs de Markt en Burgplein</div>
+                </div>
+                <div class="schedule-item">
+                    <div class="time">16:00</div>
+                    <div class="activity">Chocoladeproeverij bij Choco-Story Museum</div>
+                </div>
+                <div class="schedule-item">
+                    <div class="time">19:00</div>
+                    <div class="activity">Luxe diner bij Restaurant Goesepitte 43</div>
+                </div>
+                <div class="schedule-item">
+                    <div class="time">22:30</div>
+                    <div class="activity">Avondwandelingetje richting ons hotel</div>
+                </div>
+                
+                <div class="carousel-container">
+                    <div class="carousel" id="carousel-day1">
+                        <div class="carousel-slide">
+                            <img src="fotos/dukes1.jpg" alt="Hotel Dukes' Arches">
+                            <div class="carousel-caption">Ons luxe verblijf: Hotel Dukes' Arches</div>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="fotos/dukes2.jpg" alt="Hotel Dukes' Arches">
+                            <div class="carousel-caption">Ons luxe verblijf: De kamer</div>
+                        </div>                        
+                        <div class="carousel-slide">
+                            <img src="fotos/market.jpg" alt="Markt van Brugge">
+                            <div class="carousel-caption">De Markt van Brugge</div>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="fotos/chocolade1.jpg" alt="Chocoladeproeverij">
+                            <div class="carousel-caption">Belgische chocolade proeven</div>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="fotos/gp1.jpg" alt="Goesepitte 43">
+                            <div class="carousel-caption">Goesepitte 43</div>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="fotos/gp2.jpg" alt="Goesepitte 43">
+                            <div class="carousel-caption">Goesepitte 43</div>
+                        </div>
+                    </div>
+                    <button class="carousel-btn prev" onclick="moveSlide('carousel-day1', -1)">&#10094;</button>
+                    <button class="carousel-btn next" onclick="moveSlide('carousel-day1', 1)">&#10095;</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="day-container">
+            <div class="day-header">
+                <h2>Zaterdag – Cultuur, Shoppen & Bourgondisch Genieten</h2>
+            </div>
+            <div class="day-content">
+                <div class="schedule-item">
+                    <div class="time">08:30</div>
+                    <div class="activity">Ontbijt in het hotel</div>
+                </div>
+                <div class="schedule-item">
+                    <div class="time">10:00</div>
+                    <div class="activity">Belfort beklimmen voor een mooi uitzicht</div>
+                </div>
+                <div class="schedule-item">
+                    <div class="time">11:30</div>
+                    <div class="activity">Shoppen in de Steenstraat en boetiekjes rondom de Eiermarkt</div>
+                </div>
+                <div class="schedule-item">
+                    <div class="time">13:00</div>
+                    <div class="activity">Lunchen</div>
+                </div>
+                <div class="schedule-item">
+                    <div class="time">14:30</div>
+                    <div class="activity">Boottochtje door de grachten</div>
+                </div>
+                <div class="schedule-item">
+                    <div class="time">17:00</div>
+                    <div class="activity">Speciaalbiertjes bij Le Trappiste</div>
+                </div>
+                <div class="schedule-item">
+                    <div class="time">19:00</div>
+                    <div class="activity">Luxe diner bij Guillaume</div>
+                </div>
+                
+                <div class="carousel-container">
+                    <div class="carousel" id="carousel-day2">
+                        <div class="carousel-slide">
+                            <img src="fotos/belfort2.jpg" alt="Belfort Brugge">
+                            <div class="carousel-caption">Het Belfort</div>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="fotos/boottocht4.jpg" alt="Boottochtje Brugge">
+                            <div class="carousel-caption">Boottochtje door de grachten</div>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="fotos/shoppen.jpg" alt="Steenstraat">
+                            <div class="carousel-caption">Shoppen in de Steenstraat</div>
+                        </div>                        
+                        <div class="carousel-slide">
+                            <img src="fotos/bier.jpg" alt="Belgisch bier">
+                            <div class="carousel-caption">Genieten van Belgische speciaalbieren</div>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="fotos/guillaume1.jpg" alt="Guillaume">
+                            <div class="carousel-caption">Guillaume</div>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="fotos/guillaume2.jpg" alt="Guillaume">
+                            <div class="carousel-caption">Guillaume</div>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="fotos/guillaume3.jpg" alt="Guillaume">
+                            <div class="carousel-caption">Guillaume</div>
+                        </div>
+                    </div>
+                    <button class="carousel-btn prev" onclick="moveSlide('carousel-day2', -1)">&#10094;</button>
+                    <button class="carousel-btn next" onclick="moveSlide('carousel-day2', 1)">&#10095;</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="day-container">
+            <div class="day-header">
+                <h2>Zondag – Ontspannen Afsluiten</h2>
+            </div>
+            <div class="day-content">
+                <div class="schedule-item">
+                    <div class="time">09:00</div>
+                    <div class="activity">Ontbijt in het hotel of bij 'That's Toast'</div>
+                </div>
+                <div class="schedule-item">
+                    <div class="time">10:30</div>
+                    <div class="activity">Bezoeken van het Begijnhof</div>
+                </div>
+                <div class="schedule-item">
+                    <div class="time">12:30</div>
+                    <div class="activity">Lunchen</div>
+                </div>
+                <div class="schedule-item">
+                    <div class="time">14:00</div>
+                    <div class="activity">Opgeladen terug naar huis naar Jos en Juul om de meiden op te halen</div>
+                </div>
+                
+                <div class="carousel-container">
+                    <div class="carousel" id="carousel-day3">
+                        <div class="carousel-slide">
+                            <img src="fotos/toast2.jpg" alt="That's Toast ontbijt">
+                            <div class="carousel-caption">Heerlijk ontbijt bij That's Toast</div>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="fotos/begijn.jpg" alt="Begijnhof Brugge">
+                            <div class="carousel-caption">Het serene Begijnhof</div>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="fotos/middel.jpg"  alt="Afscheid van Brugge">
+                            <div class="carousel-caption">Tot ziens Brugge!</div>
+                        </div>
+                    </div>
+                    <button class="carousel-btn prev" onclick="moveSlide('carousel-day3', -1)">&#10094;</button>
+                    <button class="carousel-btn next" onclick="moveSlide('carousel-day3', 1)">&#10095;</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>Van harte gefeliciteerd met jouw 40ste verjaardag lieffie! Kus, Alain</p>
+    </footer>
+
+    <script>
+        // Automatische carousel functionaliteit
+        const carousels = document.querySelectorAll('.carousel');
+        const carouselIntervals = {};
+        
+        // Zet huidige positie voor elke carousel
+        carousels.forEach(carousel => {
+            carousel.dataset.position = 0;
+            
+            // Start automatische slideshow voor elke carousel
+            const id = carousel.id;
+            carouselIntervals[id] = setInterval(() => {
+                moveSlide(id, 1);
+            }, 5000); // Wissel elke 5 seconden
+        });
+        
+        function moveSlide(carouselId, direction) {
+            const carousel = document.getElementById(carouselId);
+            const slides = carousel.querySelectorAll('.carousel-slide');
+            const totalSlides = slides.length;
+            
+            // Reset interval bij handmatige navigatie
+            clearInterval(carouselIntervals[carouselId]);
+            carouselIntervals[carouselId] = setInterval(() => {
+                moveSlide(carouselId, 1);
+            }, 5000);
+            
+            // Bereken nieuwe positie
+            let newPosition = parseInt(carousel.dataset.position) + direction;
+            
+            // Zorg voor looping
+            if (newPosition < 0) newPosition = totalSlides - 1;
+            if (newPosition >= totalSlides) newPosition = 0;
+            
+            // Update positie
+            carousel.dataset.position = newPosition;
+            
+            // Verplaats carousel
+            carousel.style.transform = `translateX(-${newPosition * 100}%)`;
+        }
+        
+        // Start carousels automatisch
+        window.onload = function() {
+            carousels.forEach(carousel => {
+                // Start met eerste slide
+                carousel.style.transform = 'translateX(0)';
+            });
+        }
+    </script>
+</body>
+</html>
