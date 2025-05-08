@@ -1,0 +1,21 @@
+/***** blank_01.css ******/
+.blank_01 {
+  padding: 0;
+  margin: 0;
+}
+
+/***** content_01.css ******/
+@media all and (max-width: 680px) {
+}
+.content_01 {
+  margin-bottom: 40px;
+  padding-top: 20px;
+  color: #1f3259;
+}
+.fullwidth .content_01 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+/*# sourceMappingURL=../maps/body_templates/content_01.css.map */
+

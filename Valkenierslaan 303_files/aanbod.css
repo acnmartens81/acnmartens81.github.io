@@ -1,0 +1,705 @@
+@media all and (max-width: 680px) {
+}
+.page-1 .visual_big_01 {
+  margin-bottom: 180px;
+}
+@media (min-width: 768px) {
+  .page-1 .visual_big_01 {
+    margin-bottom: 100px;
+  }
+}
+.aanbod-search h3 {
+  font-size: 24px;
+  padding-top: 15px;
+}
+.aanbod-search .filters {
+  margin-bottom: 20px;
+  padding-right: 30px;
+}
+.aanbod-search .filters .sidenav {
+  padding-right: 0;
+  margin-right: 0;
+}
+.aanbod-search .filters .sidenav .subnav a {
+  margin-right: 0;
+}
+.aanbod-search .filters .panel {
+  border: 0;
+  box-shadow: none;
+  background: #d8dde9;
+  margin-bottom: 2px;
+  margin-right: 0px;
+}
+.aanbod-search .filters .panel .panel-header {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+}
+.aanbod-search .filters .panel .panel-header h4 {
+  margin: 0;
+  text-transform: none;
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 16px;
+}
+.aanbod-search .filters .panel .panel-header:hover {
+  text-decoration: none;
+}
+.aanbod-search .filters .panel .panel-body {
+  padding-top: 5px;
+  display: none;
+  font-size: 13px;
+  display: block;
+}
+.aanbod-search .filters .panel .panel-body h5 {
+  font-size: 13px;
+}
+.aanbod-search .filters .panel .panel-body select {
+  font-size: 13px;
+}
+.aanbod-search .filters .panel.closed .panel-body {
+  display: none;
+}
+.aanbod-search .filters .form-spacer {
+  height: 15px;
+}
+.aanbod-search .filters .form-group {
+  margin-bottom: 0;
+}
+.aanbod-search .filters .form-inline label {
+  padding-top: 4px;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+.aanbod-search .filters .btn {
+  margin-right: 30px;
+}
+.aanbod-search .filters .reset-filters {
+  padding-left: 15px;
+  padding-top: 15px;
+}
+.aanbod-search .search-results {
+  margin-top: 6px;
+  margin-bottom: 20px;
+}
+.aanbod-search .search-results .result-block {
+  margin-bottom: 15px;
+}
+@media (min-width: 1400px) {
+  .aanbod-search .search-results .result-block {
+    width: 33.333334%;
+  }
+}
+.aanbod-search .search-results .result-block.nieuwbouw {
+  width: 100%;
+}
+.aanbod-search .search-results .btn {
+  background: #fff;
+  color: #313131;
+}
+.aanbod-search .search-results .btn.active,
+.aanbod-search .search-results .btn:hover {
+  background: #d8dde9;
+  color: #1f3259;
+}
+.aanbod-search .search-results .results-header {
+  margin-bottom: 15px;
+}
+.aanbod-search .search-results .results-header p {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+.aanbod-search .search-results .order-link {
+  margin: 0 2px;
+}
+.aanbod-media {
+  margin-top: 12px;
+  margin-bottom: 10px;
+  max-height: 600px;
+  overflow: hidden;
+  background: #fff;
+  border-top: 10px solid #fff;
+  border-bottom: 10px solid #fff;
+}
+.aanbod-media .grid-item {
+  margin-bottom: 10px;
+}
+.aanbod-media .grid-sizer,
+.aanbod-media .grid-item {
+  width: calc(50% - 5px);
+}
+.aanbod-media .grid-item-wide {
+  width: 100%;
+}
+.aanbod-media .grid-item-custom {
+  padding: 30px;
+  background: linear-gradient(to bottom, #2c324e 0%, #3c466b 100%);
+  font-family: Roboto;
+  font-weight: 400;
+  color: #fff;
+}
+.aanbod-media .grid-item-custom h2 {
+  color: white;
+}
+.aanbod-media .grid-item-custom h4 {
+  display: inline;
+  color: #fff;
+  font-size: 26px;
+  line-height: 28px;
+}
+.aanbod-media .grid-item-custom h4 span:after {
+  background: #fff;
+  bottom: 0%;
+}
+@media (min-width: 992px) {
+  .aanbod-media .grid-sizer,
+  .aanbod-media .grid-item {
+    width: calc(25% - 7.5px);
+  }
+  .aanbod-media .grid-item-wide {
+    width: calc(50% - 5px);
+  }
+}
+@media (min-width: 1200px) {
+  .aanbod-media .grid-sizer,
+  .aanbod-media .grid-item {
+    width: calc(20% - 8px);
+  }
+  .aanbod-media .grid-item-wide {
+    width: calc(60% - 4px);
+  }
+}
+.aanbod-media.newest-grid {
+  padding-top: 10px;
+  max-height: 600px;
+}
+.aanbod-media.newest-grid .aanbod-item {
+  background: #eee;
+  transition: background 300ms;
+}
+.aanbod-media.newest-grid .aanbod-item img {
+  opacity: 0;
+  transition: opacity 300ms;
+  width: 100%;
+}
+.aanbod-media.newest-grid .aanbod-item h3 {
+  position: absolute;
+  z-index: 2;
+  color: #fff;
+  opacity: 0;
+  transition: opacity 300ms;
+  padding: 0 20px;
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 14px;
+}
+@media (min-width: 1200px) {
+  .aanbod-media.newest-grid .aanbod-item h3 {
+    font-size: 18px;
+  }
+}
+.aanbod-media.newest-grid .aanbod-item.visible {
+  background: #1f3259;
+}
+.aanbod-media.newest-grid .aanbod-item.visible img {
+  opacity: 1;
+}
+.aanbod-media.newest-grid .aanbod-item:hover img {
+  opacity: .2;
+}
+.aanbod-media.newest-grid .aanbod-item:hover h3 {
+  opacity: 1;
+}
+.aanbod-media.newest-grid:hover h3 {
+  position: absolute;
+  bottom: 10px;
+}
+@media (max-width: 767px) {
+  .aanbod-media.newest-grid {
+    max-height: 1800px;
+  }
+  .aanbod-media.newest-grid .grid-sizer,
+  .aanbod-media.newest-grid .grid-item {
+    width: 100%;
+  }
+}
+.aanbod-media.newest-grid .news-item {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.aanbod-media.newest-grid .news-item:hover {
+  text-decoration: none;
+}
+.aanbod-media.newest-grid .news-item .date {
+  font-family: Roboto;
+  font-weight: 700;
+  font-size: 14px;
+  display: block;
+}
+.aanbod-detail .content-header.less-height .content-header-content-wrapper .content-header-content {
+  padding-left: 5px;
+}
+@media (min-width: 480px) {
+  .aanbod-detail .content-header.less-height .content-header-content-wrapper .content-header-content {
+    padding-left: 45px;
+  }
+}
+.aanbod-detail .content-header.less-height .content-header-content-wrapper .content-header-content h1 {
+  font-size: 25px;
+  line-height: 25px;
+  margin-top: 25px;
+}
+@media (min-width: 480px) {
+  .aanbod-detail .content-header.less-height .content-header-content-wrapper .content-header-content h1 {
+    font-size: 30px;
+    line-height: 30px;
+  }
+}
+@media (min-width: 768px) {
+  .aanbod-detail .content-header.less-height .content-header-content-wrapper .content-header-content h1 {
+    font-size: 40px;
+    line-height: 40px;
+    margin-top: 35px;
+  }
+}
+.aanbod-detail hr {
+  border-color: #d8dde9;
+  margin: 0;
+}
+.aanbod-detail .detail-block {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.aanbod-detail .detail-block h2 {
+  margin-top: 15px;
+  font-size: 25px;
+}
+@media (min-width: 1200px) {
+  .aanbod-detail .detail-block {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+  .aanbod-detail .detail-block h2 {
+    margin-top: 0px;
+    font-size: 30px;
+  }
+}
+.aanbod-detail .detail-block .no-padding {
+  padding: 0;
+}
+.aanbod-detail .detail-block .blue-bg {
+  background-color: #d8dde9;
+  border-top: 1px solid #FFF;
+}
+.aanbod-detail .detail-links .btn {
+  margin: auto;
+  margin-bottom: 5px;
+  display: block;
+  max-width: 350px;
+}
+@media (min-width: 992px) {
+  .aanbod-detail .detail-links .btn {
+    display: inline-block;
+  }
+}
+.aanbod-detail .detail-header {
+  background-color: #ff6005;
+  height: 150px;
+  max-height: 150px;
+  color: #FFF;
+}
+.aanbod-detail .detail-header:before,
+.aanbod-detail .detail-header:after {
+  content: " ";
+  display: table;
+}
+.aanbod-detail .detail-header:after {
+  clear: both;
+}
+.aanbod-detail .detail-header h2 {
+  font-family: Roboto;
+  margin-top: 40px;
+  font-weight: 400;
+  font-size: 36px;
+  color: #FFF;
+}
+.aanbod-detail .detail-header .address {
+  float: left;
+}
+.aanbod-detail .detail-header .price {
+  clear: both;
+}
+@media (min-width: 768px) {
+  .aanbod-detail .detail-header .price {
+    text-align: right;
+    float: right;
+    clear: none;
+    margin-left: 30px;
+  }
+}
+.aanbod-detail .specs h2 {
+  margin-bottom: 0;
+}
+@media (min-width: 768px) {
+  .aanbod-detail .specs h2 {
+    margin-bottom: 15px;
+  }
+}
+.aanbod-detail .specs .specs-item {
+  border-bottom: 1px solid #d8dde9;
+  padding-left: 0;
+}
+@media (min-width: 768px) {
+  .aanbod-detail .specs .specs-item {
+    padding-left: 15px;
+  }
+}
+.aanbod-detail .specs .specs-item .item-content {
+  padding: 12px 8px 10px 0;
+  background: #fff;
+  font-size: 14px;
+  font-weight: bold;
+}
+@media (min-width: 768px) {
+  .aanbod-detail .specs .specs-item .item-content {
+    padding: 13px 20px 10px 20px;
+  }
+}
+.aanbod-detail .specs .specs-item h5 {
+  font-weight: normal;
+  font-size: 14px;
+  margin: 0;
+  margin-bottom: 3px;
+}
+.aanbod-detail .specs .energielabel {
+  display: inline-block;
+  padding: 0 25px 0 6px;
+  position: relative;
+  color: #fff;
+  font-size: 12px;
+  line-height: 20px;
+  z-index: 1;
+}
+.aanbod-detail .specs .energielabel:after {
+  z-index: -1;
+  right: 0;
+  top: 50%;
+  border: 0px solid transparent;
+  content: "";
+  height: 0;
+  width: 0;
+  position: absolute;
+  border-left-color: #888;
+  border-width: 10px;
+  margin-top: -10px;
+}
+.aanbod-detail .specs .energielabel:before {
+  z-index: -1;
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 20px;
+  background: #888;
+}
+.aanbod-detail .specs .energielabel.a:after {
+  border-left-color: #33A357;
+}
+.aanbod-detail .specs .energielabel.a:before {
+  background: #33A357;
+}
+.aanbod-detail .specs .energielabel.b:after {
+  border-left-color: #79B752;
+}
+.aanbod-detail .specs .energielabel.b:before {
+  background: #79B752;
+}
+.aanbod-detail .specs .energielabel.c:after {
+  border-left-color: #C3D545;
+}
+.aanbod-detail .specs .energielabel.c:before {
+  background: #C3D545;
+}
+.aanbod-detail .specs .energielabel.d:after {
+  border-left-color: #FFF12C;
+}
+.aanbod-detail .specs .energielabel.d:before {
+  background: #FFF12C;
+}
+.aanbod-detail .specs .energielabel.e:after {
+  border-left-color: #EDB731;
+}
+.aanbod-detail .specs .energielabel.e:before {
+  background: #EDB731;
+}
+.aanbod-detail .specs .energielabel.f:after {
+  border-left-color: #D66F2C;
+}
+.aanbod-detail .specs .energielabel.f:before {
+  background: #D66F2C;
+}
+.aanbod-detail .specs .energielabel.g:after {
+  border-left-color: #CC232A;
+}
+.aanbod-detail .specs .energielabel.g:before {
+  background: #CC232A;
+}
+.aanbod-detail .description {
+  max-height: 510px;
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 15px;
+}
+.aanbod-detail .description .intro {
+  font-size: 17px;
+  display: block;
+  border-bottom: 1px solid #d8dde9;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+}
+@media (min-width: 768px) {
+  .aanbod-detail .description .intro {
+    font-size: 20px;
+  }
+}
+.aanbod-detail .description h3 {
+  margin-bottom: 5px;
+  font-size: 18px;
+  line-height: 22px;
+}
+@media (min-width: 768px) {
+  .aanbod-detail .description h3 {
+    font-size: 24px;
+    line-height: 28px;
+  }
+}
+@media (min-width: 768px) {
+  .aanbod-detail .description {
+    max-height: none;
+    column-count: 2;
+    /* Firefox */
+    column-gap: 80px;
+  }
+}
+.aanbod-detail .description-read-more {
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+@media (min-width: 768px) {
+  .aanbod-detail .description-read-more {
+    margin-top: 10px;
+    margin-bottom: 0px;
+  }
+}
+.aanbod-detail .share {
+  margin-top: 20px;
+  color: #1f3259;
+}
+.aanbod-detail .share span {
+  font-weight: bold;
+  font-size: 24px;
+}
+.aanbod-detail .share a {
+  font-size: 24px;
+  line-height: 24px;
+  color: #AAA;
+  margin-left: 20px;
+}
+.aanbod-detail .share a.fb:hover {
+  color: #225b99;
+}
+.aanbod-detail .share a.tw:hover {
+  color: #00adf2;
+}
+.aanbod-detail .share a.li:hover {
+  color: #1d87be;
+}
+.aanbod-detail .aanbod-map {
+  margin: 0;
+  padding: 0;
+}
+.aanbod-detail .bezichtiging-form .btn.btn-arrow-v2 {
+  transition: background 300ms, color 300ms;
+  opacity: .5;
+  margin-bottom: 15px;
+}
+.aanbod-detail .bezichtiging-form .btn.btn-arrow-v2,
+.aanbod-detail .bezichtiging-form .btn.btn-arrow-v2:hover,
+.aanbod-detail .bezichtiging-form .btn.btn-arrow-v2:active,
+.aanbod-detail .bezichtiging-form .btn.btn-arrow-v2:focus,
+.aanbod-detail .bezichtiging-form .btn.btn-arrow-v2:active:focus,
+.aanbod-detail .bezichtiging-form .btn.btn-arrow-v2.active {
+  box-shadow: none;
+  outline: 0;
+  background: #d8dde9;
+  color: #1f3259;
+}
+.aanbod-detail .bezichtiging-form .btn.btn-arrow-v2:hover,
+.aanbod-detail .bezichtiging-form .btn.btn-arrow-v2:active {
+  background: #b7c1d7;
+}
+.aanbod-detail .bezichtiging-form .btn.btn-arrow-v2.arrow-active {
+  opacity: 1;
+  position: relative;
+  background-color: #1f3259;
+  color: #FFF;
+}
+.aanbod-detail .bezichtiging-form .btn.btn-arrow-v2.arrow-active:after {
+  display: block;
+  position: absolute;
+  content: " ";
+  width: 0px;
+  height: 0px;
+  border: 10px solid transparent;
+  border-top-color: #1f3259;
+  border-bottom: 0;
+  overflow: hidden;
+  top: 100%;
+  left: 50%;
+  margin-left: -10px;
+  transition: border-color 300ms;
+}
+.aanbod-detail .bezichtiging-form .btn.btn-arrow-v2.arrow-active:hover,
+.aanbod-detail .bezichtiging-form .btn.btn-arrow-v2.arrow-active:active,
+.aanbod-detail .bezichtiging-form .btn.btn-arrow-v2.arrow-active:focus {
+  background: #1f3259;
+  color: white;
+}
+.aanbod-detail .bezichtiging-form .white-block {
+  background: #fff;
+  padding: 20px 20px 20px 0;
+}
+@media (min-width: 992px) {
+  .aanbod-detail .bezichtiging-form .white-block {
+    padding: 30px;
+  }
+}
+.nieuwbouw-row {
+  padding-bottom: 30px;
+  border-bottom: 1px solid #d8dde9;
+  margin-bottom: 15px;
+}
+.nieuwbouw-row .nieuwbouw-content h3 {
+  margin: 0;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.aanbod-block {
+  height: 270px;
+  position: relative;
+}
+@media (min-width: 768px) {
+  .aanbod-block {
+    height: 270px;
+  }
+}
+.aanbod-block.nieuwbouw {
+  height: 220px !important;
+}
+.aanbod-block a {
+  text-decoration: none;
+}
+.aanbod-block .panel {
+  display: block;
+  opacity: 0;
+  height: 270px;
+  position: relative;
+  border: 0;
+  box-sizing: border-box;
+  box-shadow: none;
+}
+@media (min-width: 768px) {
+  .aanbod-block .panel {
+    height: 270px;
+  }
+}
+.aanbod-block .panel.nieuwbouw {
+  height: 220px;
+}
+.aanbod-block .panel .visual {
+  height: 270px;
+  background-size: cover;
+  background-position: center center;
+}
+.aanbod-block .panel .visual.nieuwbouw {
+  height: 220px;
+}
+.aanbod-block .panel .panel-body {
+  position: absolute;
+  left: 0;
+  padding: 0;
+  width: 100%;
+  margin-bottom: 0px;
+}
+@media (max-width: 767px) {
+  .aanbod-block .panel .panel-body {
+    margin-bottom: 25px;
+  }
+}
+.aanbod-block .panel .panel-body .home-info {
+  position: absolute;
+  width: 100%;
+  background-color: rgba(16, 32, 64, 0.7);
+  padding: 15px 20px;
+  bottom: 0;
+}
+.aanbod-block .panel .panel-body .home-info p {
+  color: white;
+  font-size: 20px;
+  line-height: 20px;
+  margin: 0;
+}
+.aanbod-block .panel .panel-body .home-info p .sub {
+  font-size: 14px;
+  line-height: 18px;
+}
+.aanbod-block .panel .panel-body .home-info p .price {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 300;
+}
+.aanbod-block .panel .panel-body .home-info .more-info {
+  display: none;
+  color: #FFF;
+  font-size: 13px;
+  line-height: 13px;
+  padding: 10px 0 0 0;
+  text-transform: uppercase;
+}
+.aanbod-block .panel .status {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  background: #ff6005;
+  padding: 5px 20px;
+  color: #fff;
+  font-size: 14px;
+  line-height: 20px;
+}
+.aanbod-block.loaded {
+  border: 0;
+}
+.aanbod-block.loaded .loader {
+  display: none;
+}
+.aanbod-block.loaded .panel {
+  opacity: 1;
+}
+.aanbod-block.loaded:hover .panel {
+  opacity: 1;
+}
+.select-prefix label {
+  padding-left: 0;
+  padding-top: 4px;
+}
+.select-prefix div {
+  padding-right: 0;
+}
+.select-prefix.more-padding-top {
+  padding-top: 20px;
+}
+
+/*# sourceMappingURL=../maps/custom/aanbod.css.map */
